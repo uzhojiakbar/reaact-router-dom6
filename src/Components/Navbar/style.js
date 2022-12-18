@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -11,18 +11,28 @@ export const Container = styled.div`
     align-items: center;
     `
 
-export const NavbarLink = styled(NavLink)`
-    color: white;
+export const Link = styled(NavLink)`
+    color: ${({ active }) => active ? 'black' : 'white'};
+    background-color: ${({ active }) => active ? 'white' : 'none'};
+    box-shadow: 
+    ${({ active }) => 
+    active ? 
+    '0px 0px 20px white,0px 0px 50px white' 
+    :
+     'none'};
     font-size: 25px;
     font-weight: 900;
     font-family: sans-serif;
     text-decoration: none;
     padding: 7px 15px;
     border-radius: 25px;
-    transition: .3s;
+    transition: .7s;
     :hover{
-        background-color: white;
-        color: black;
-        box-shadow:0px 2px 10px white;
-    }
+            background-color: white;
+            color: black;
+            box-shadow:0px 0px 20px white,
+            0px 0px 50px white, 
+            0px 0px 70px white,
+             0px 0px 100px white;
+        }
 `
