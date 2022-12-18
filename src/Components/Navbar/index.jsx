@@ -1,15 +1,19 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
+import { NavInformations } from '../../utils/navbar'
 import { Container, Link } from './style'
-
 const Navbar = () => {
+  const isActive = (url) => {
+    return window.location.pathname.includes(url)
+  } 
   return (
     <>
       <Container>
-        <Link active={window.location.pathname.includes('/home')} to={'/home'}>Home</Link>
-        <Link active={window.location.pathname.includes('/students')} to={'/students'}>Students</Link>
-        <Link active={window.location.pathname.includes('/teachers')} to={'/teachers'}>Teachers</Link>
-        <Link active={window.location.pathname.includes('/about')} to={'/about'}>About</Link>
+        {
+          NavInformations.map((item)=>{
+            return <Link active={isActive(item.path)} to={item.path}>{item.title}</Link>
+          })
+        }
       </Container>
       <Outlet/>
     </>

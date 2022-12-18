@@ -15,11 +15,11 @@ export const Link = styled(NavLink)`
     color: ${({ active }) => active ? 'black' : 'white'};
     background-color: ${({ active }) => active ? 'white' : 'none'};
     box-shadow: 
-    ${({ active }) => 
-    active ? 
-    '0px 0px 20px white,0px 0px 50px white' 
-    :
-     'none'};
+    ${({ active }) =>
+        active ?
+            '0px 0px 20px white,0px 0px 50px white'
+            :
+            'none'};
     font-size: 25px;
     font-weight: 900;
     font-family: sans-serif;
