@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Container } from './style'
 
 const Students = () => {
-  const [Students,setStudents] = useState([
+  const [Students] = useState([
     {id:1,name:'Murodillayev Hojiakbar',job:'FrontEnd Developer'},
     {id:2,name:'Eshmat',job:'FrontEnd Developer'},
     {id:3,name:'Toshmat',job:'FrontEnd Developer'},
